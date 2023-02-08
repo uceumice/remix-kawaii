@@ -1,0 +1,18 @@
+# Node JS Libraries
+/node_modules
+
+# Remix Build Cache
+/.cache
+
+# Remix Pages Build
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
+
+# Remix Client Build
+/public/build
+
+# Tailwind Output
+/styles
+
+# Worker Binding Variables
+/.*.vars

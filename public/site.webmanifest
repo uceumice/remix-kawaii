@@ -1,0 +1,10 @@
+{
+  "name": "remix-template-kawaii",
+  "short_name": "Remix Kawaii",
+  "description": "Remix Run Stack: Kawaii - Cloudflare Pages, Radix, Tailwind, VechaiUI, Headless UI, Persistant Preferences",
+  "icons": [],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "display": "standalone"
+}

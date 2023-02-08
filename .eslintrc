@@ -1,0 +1,109 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+  },
+  "extends": [
+    "@remix-run/eslint-config",
+    "@remix-run/eslint-config/node",
+    "@remix-run/eslint-config/jest",
+    "plugin:markdown/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "autofix",
+    "react",
+    "@typescript-eslint",
+    "unused-imports",
+    "markdown"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/comma-dangle": ["error", "only-multiline"],
+    "@typescript-eslint/dot-notation": ["off"],
+    "@typescript-eslint/no-throw-literal": ["off"],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "react/jsx-no-useless-fragment": [
+      2,
+      {
+        "allowExpressions": true
+      }
+    ],
+    "arrow-body-style": ["error", "always"],
+    "autofix/no-debugger": "error",
+    "autofix/no-unused-vars": "error",
+    "comma-dangle": ["error", "only-multiline"],
+    "dot-notation": "off",
+    "import/named": "error",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["info", "warn", "error"]
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx", ".ts"]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unescaped-entities": "off",
+    "react/require-default-props": "off",
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": [
+          "external",
+          ["index", "sibling", "parent"],
+          "internal",
+          ["type", "unknown", "object"]
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "group": "object",
+            "pattern": "*.css",
+            "patternOptions": {
+              "matchBase": true
+            },
+            "position": "after"
+          },
+          {
+            "group": "object",
+            "pattern": "*.svg",
+            "patternOptions": {
+              "matchBase": true
+            },
+            "position": "after"
+          }
+        ],
+        "warnOnUnassignedImports": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.cache
+.vscode
+
+styles/
+
+public/
+functions/
+node_modules/
+
+lint-staged.config.js
+commitlint.config.js
+tainwind.config.js
+postcss.config.js
+remix-routes.d.ts
+remix.config.js
