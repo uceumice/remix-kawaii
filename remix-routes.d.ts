@@ -14,6 +14,10 @@ export declare function $path(
   route: "/",
   ...query: Query<import('../app/root').SearchParams>
 ): string;
+export declare function $path(
+  route: "/api/hello",
+  ...query: Query<import('../app/routes\api\hello').SearchParams>
+): string;
 
 
 
