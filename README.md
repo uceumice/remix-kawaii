@@ -1,6 +1,6 @@
 # Remix Kawaii Stack
 
-Deployed to Cloudflare Pages: [remix-kawaii.ueuie.dev](remix-kawaii.ueuie.dev)
+Deployed to Cloudflare Pages: [remix-kawaii.ueuie.dev](https://remix-kawaii.ueuie.dev "Remix Kawaii Demo")
 
 ## TODO
 
