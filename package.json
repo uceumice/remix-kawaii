@@ -8,7 +8,7 @@
     "dev:css": "tailwindcss -w -i ./application/tailwind/global.css -o ./styles/tailwind.css",
     "dev:remix": "remix watch",
     "dev:routes": "rkr -w -o .",
-    "wr": "wrangler pages dev public --compatibility-date=2023-01-28 --compatibility-flags=streams_enable_constructors --do CARD_STUDIO=CardStudio@card-objects CARD_EDITOR=CardEditor@card-objects --persist",
+    "wr": "wrangler pages dev public --compatibility-date=2023-01-28 --compatibility-flags=streams_enable_constructors --persist",
     "build": "run-s build:*",
     "build:css": "tailwindcss -m -i ./application/tailwind/global.css -o ./styles/tailwind.css",
     "build:remix": "remix build",
