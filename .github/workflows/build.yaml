@@ -1,56 +1,56 @@
 on:
   push:
     paths:
-    - "pages.build.json"
+      - 'pages.build.json'
 
 jobs:
-  build-publish:
+  build-and-publish:
     runs-on: ubuntu-latest
     environment: execution
     permissions:
       contents: read
       deployments: write
-    name: Build & Publish to Cloudflare Pages
+    name: Build Remix Run + Publish to Cloudflare Pages
     steps:
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: install `node.js`
         uses: actions/setup-node@v3
 
       - uses: pnpm/action-setup@v2
-        name: Install `pnpm`
+        name: install `pnpm`
         id: pnpm-install
         with:
           version: 7
           run_install: false
 
-      - name: Get pnpm store directory
+      - name: get `pnpm` store directory
         id: pnpm-cache
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
-        name: Setup pnpm cache
+        name: setup `pnpm`` cache
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
+      - name: install dependencies
         run: pnpm install
 
-      - name: Build Remix
+      - name: build application
         run: pnpm build
 
-      - name: Publish to Cloudflare Pages
+      - name: publish to cloudflare pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ACCOUNT_ID
-          projectName: PROJECT_NAME
-          directory: ASSET_DIRECTORY
+          accountId: ${{ secrets.ACCOUNT_ID }}
+          projectName: ${{ secrets.PROJECT_NAME }}
+          directory: ${{ vars.ASSET_DIRECTORY }}
           # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
