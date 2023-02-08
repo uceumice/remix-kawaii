@@ -1,5 +1,7 @@
 # Remix Kawaii Stack
 
+Deployed to Cloudflare Pages: [remix-kawaii.ueuie.dev](remix-kawaii.ueuie.dev)
+
 ## TODO
 
 - [ ] Create an understandable and fascinating description and tutorial as for a starter template.
