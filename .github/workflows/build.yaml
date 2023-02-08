@@ -4,8 +4,9 @@ on:
     - "pages.build.json"
 
 jobs:
-  publish:
+  build-publish:
     runs-on: ubuntu-latest
+    environment: execution
     permissions:
       contents: read
       deployments: write
