@@ -46,11 +46,10 @@ jobs:
         run: pnpm build
 
       - name: publish to cloudflare pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/pages-action@22d9e5e143c6f9400b438a489e8d434b416d235d
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.ACCOUNT_ID }}
           projectName: ${{ secrets.PROJECT_NAME }}
           directory: ${{ vars.ASSET_DIRECTORY }}
-          # Optional: Enable this if you want to have GitHub Deployments triggered
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
