@@ -1,8 +1,22 @@
 {
   "name": "@remix-kawaii/routes",
-  "publisher": "@uceumice <dev@ueuie.dev>",
   "version": "1.0.0",
+  "publisher": "@uceumice <dev@ueuie.dev>",
+  "author": {
+    "name": "uceumice",
+    "email": "dev@ueuie.dev",
+    "url": "http://me.ueuie.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii"
+  },
   "description": "Remix Kawaii | Typesafe Routes Helpers",
+  "homepage": "https://kawaii.ueuie.dev/package/routes",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues",
+    "email": "bug@ueuie.dev"
+  },
   "main": "out/index.js",
   "bin": {
     "rkr": "out/cli.js"

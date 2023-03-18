@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,json}\"",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint --fix",
+    "pub": "pnpm publish -r --access public",
     "ncu": "ncu --deep --reject meow",
     "ncu:u": "ncu -u --deep --reject meow"
   },
