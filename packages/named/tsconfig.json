@@ -4,15 +4,9 @@
     "outDir": "out",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "out"
-  ]
+  "include": ["src"],
+  "exclude": ["out"]
 }
