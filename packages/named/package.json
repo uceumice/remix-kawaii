@@ -1,6 +1,6 @@
 {
   "name": "@remix-kawaii/named",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "@uceumice <dev@ueuie.dev>",
   "author": {
     "name": "uceumice",
@@ -27,9 +27,6 @@
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "dev": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\""
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "@remix-run/server-runtime": ">=1.10.0"
