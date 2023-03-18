@@ -1,0 +1,41 @@
+{
+  "name": "@remix-kawaii/named",
+  "version": "1.0.0",
+  "publisher": "@uceumice <dev@ueuie.dev>",
+  "description": "Remix Kawaii | Named Actions/Loaders",
+  "main": "out/index.js",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "dev": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\""
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "@remix-run/server-runtime": ">=1.10.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "typescript": "~5.0.2",
+    "concurrently": "^7.6.0",
+    "tsc-alias": "^1.8.3",
+    "tsconfig": "workspace:*"
+  },
+  "keywords": [
+    "remix run",
+    "remix",
+    "server",
+    "named",
+    "reducer",
+    "actions",
+    "loaders",
+    "helpers"
+  ],
+  "license": "MIT"
+}

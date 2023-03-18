@@ -1,0 +1,21 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint --fix",
+    "ncu": "ncu --deep --reject meow",
+    "ncu:u": "ncu -u --deep --reject meow"
+  },
+  "devDependencies": {
+    "eslint-config-remix-kawaii": "workspace:*",
+    "npm-check-updates": "^16.7.12",
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.3"
+  },
+  "packageManager": "pnpm@7.16.0"
+}
