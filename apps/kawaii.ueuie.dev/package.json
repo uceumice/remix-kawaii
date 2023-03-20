@@ -3,7 +3,9 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
+    "build": "cross-env NODE_ENV=production \"run-s build:route build:remix\"",
+    "build:remix": "remix build",
+    "build:route": "rkr -o .",
     "dev": "run-p dev:*",
     "dev:remix": "cross-env NODE_ENV=development remix dev",
     "dev:serve": "cross-env NODE_ENV=development wrangler pages dev --live-reload ./public",
@@ -41,7 +43,8 @@
     "rooks": "^7.8.1",
     "zod": "^3.21.4",
     "zodix": "^0.4.0",
-    "zustand": "^4.3.6"
+    "zustand": "^4.3.6",
+    "zustand-create": "^1.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",
