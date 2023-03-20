@@ -3,7 +3,7 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "run-s build:route pnpm build:remix",
+    "build": "run-s build:route build:remix",
     "build:remix": "cross-env NODE_ENV=production remix build",
     "build:route": "rkr -o .",
     "dev": "run-p dev:*",
