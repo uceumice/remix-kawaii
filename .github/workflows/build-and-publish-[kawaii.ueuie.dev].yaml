@@ -26,14 +26,14 @@ jobs:
         uses: actions/setup-node@v3
 
       # ----
-      - name: ⚃ Install deps
+      - name: ⎔ Setup pnpm
         uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
           run_install: false
 
-      - name: 💫 Cache dependencies
+      - name: 💫 Include pnpm cache (store)
         id: pnpm-cache
         shell: bash
         run: |

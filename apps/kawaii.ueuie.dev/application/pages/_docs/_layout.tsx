@@ -28,7 +28,15 @@ export function $$Docs() {
           <IcKawaiiEyes className={clsx(["w-16 h-16"])} />
         </a>
 
-        <div className="flex flex-col gap-2 items-center">
+        <div
+          className={clsx([
+            "flex gap-2 items-center",
+            // Desktop
+            "md:flex-col",
+            // Mobile
+            "flex-row",
+          ])}
+        >
           <a
             className="btn btn-circle btn-outline rounded-full mt-5 gap-4 uppercase font-bold"
             href="https://github.com/uceumice/remix-kawaii#readme"
