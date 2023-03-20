@@ -3,8 +3,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "cross-env NODE_ENV=production \"pnpm build:route && pnpm build:remix\"",
-    "build:remix": "remix build",
+    "build": "run-s build:route pnpm build:remix",
+    "build:remix": "cross-env NODE_ENV=production remix build",
     "build:route": "rkr -o .",
     "dev": "run-p dev:*",
     "dev:remix": "cross-env NODE_ENV=development remix dev",
