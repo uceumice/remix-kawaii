@@ -16,21 +16,24 @@ jobs:
     name: Build Remix Run + Publish to Cloudflare Pages
 
     steps:
-      - name: checkout
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout
         uses: actions/checkout@v3
 
-      - name: install `node.js`
+      - name: ⎔ Setup node
         uses: actions/setup-node@v3
 
       # ----
-      - uses: pnpm/action-setup@v2
-        name: install `pnpm`
+      - name: ⚃ Install deps
+        uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: 7
           run_install: false
 
-      - name: get `pnpm` store directory
+      - name: 💫 Cache dependencies
         id: pnpm-cache
         shell: bash
         run: |
@@ -43,14 +46,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       # ----
-      - name: install dependencies
-        run: pnpm install
+      - name: 📥 Install dependencies
+        run: pnpm install --filter @remix-kawaii.dev/docs
 
-      - name: build application
+      - name: 🖇 Build application
         run: npx turbo run build --filter @remix-kawaii.dev/docs
 
       # ----
-      - name: publish to cloudflare pages
+      - name: 🧸 Publish to cloudflare pages
         uses: cloudflare/pages-action@22d9e5e143c6f9400b438a489e8d434b416d235d
         with:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
