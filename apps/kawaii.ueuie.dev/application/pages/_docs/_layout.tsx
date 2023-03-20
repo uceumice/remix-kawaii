@@ -38,7 +38,7 @@ export function $$Docs() {
           ])}
         >
           <a
-            className="btn btn-circle btn-outline rounded-full mt-5 gap-4 uppercase font-bold"
+            className="btn btn-circle btn-outline rounded-full"
             href="https://github.com/uceumice/remix-kawaii#readme"
           >
             <RxGithubLogo className="w-5 h-5" />
