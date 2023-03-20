@@ -17,7 +17,7 @@ importers:
   apps/kawaii.ueuie.dev:
     specifiers:
       '@cloudflare/workers-types': ^3.18.0
-      '@remix-kawaii/named': workspace:^1.0.1
+      '@remix-kawaii/named': ^1.0.1
       '@remix-kawaii/routes': ^0.0.1
       '@remix-run/cloudflare': ^1.14.3
       '@remix-run/cloudflare-pages': ^1.14.3
@@ -5102,7 +5102,7 @@ packages:
     dependencies:
       confusing-browser-globals: 1.0.11
       eslint: 8.36.0
-      eslint-plugin-import: 2.27.5_a7er6olmtneep4uytpot6gt7wu
+      eslint-plugin-import: 2.27.5_eslint@8.36.0
       object.assign: 4.1.4
       object.entries: 1.1.6
       semver: 6.3.0
@@ -5135,7 +5135,7 @@ packages:
     dependencies:
       eslint: 8.36.0
       eslint-config-airbnb-base: 15.0.0_eakrjjutlgqjxe5ydhtnd4qdmy
-      eslint-plugin-import: 2.27.5_a7er6olmtneep4uytpot6gt7wu
+      eslint-plugin-import: 2.27.5_eslint@8.36.0
       eslint-plugin-jsx-a11y: 6.7.1_eslint@8.36.0
       eslint-plugin-react: 7.32.2_eslint@8.36.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
@@ -5195,6 +5195,34 @@ packages:
       is-core-module: 2.11.0
       is-glob: 4.0.3
       synckit: 0.8.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /eslint-module-utils/2.7.4_mynqafrekjmjm6w6lcthssrfee:
+    resolution: {integrity: sha512-j4GT+rqzCoRKHwURX7pddtIPGySnX9Si/cgMI5ztrcqOPtk5dDEeZ34CQVPphnqkJytlc97Vuk05Um2mJ3gEQA==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint:
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
+    dependencies:
+      debug: 3.2.7
+      eslint: 8.36.0
+      eslint-import-resolver-node: 0.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5302,6 +5330,38 @@ packages:
       eslint: 8.36.0
       eslint-import-resolver-node: 0.3.7
       eslint-module-utils: 2.7.4_tzfhnsp6rhftjfsbnqrkrbah74
+      has: 1.0.3
+      is-core-module: 2.11.0
+      is-glob: 4.0.3
+      minimatch: 3.1.2
+      object.values: 1.1.6
+      resolve: 1.22.1
+      semver: 6.3.0
+      tsconfig-paths: 3.14.2
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: true
+
+  /eslint-plugin-import/2.27.5_eslint@8.36.0:
+    resolution: {integrity: sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+    dependencies:
+      array-includes: 3.1.6
+      array.prototype.flat: 1.3.1
+      array.prototype.flatmap: 1.3.1
+      debug: 3.2.7
+      doctrine: 2.1.0
+      eslint: 8.36.0
+      eslint-import-resolver-node: 0.3.7
+      eslint-module-utils: 2.7.4_mynqafrekjmjm6w6lcthssrfee
       has: 1.0.3
       is-core-module: 2.11.0
       is-glob: 4.0.3
