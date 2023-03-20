@@ -5,6 +5,9 @@ export const meta: MetaFunction = () => {
   return {
     viewport: "width=device-width,initial-scale=1",
     charSet: "utf-8",
-    title: "Remix Kawaii Docs",
+    title: "Remix Kawaii | Hi",
+    "msapplication-TileColor": "#ffffff",
+    "msapplication-config": "/favicons/browserconfig.xml",
+    "theme-color": "#ffffff",
   };
 };

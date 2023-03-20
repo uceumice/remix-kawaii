@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinkDescriptor, LinksFunction } from "@remix-run/cloudflare";
 import styles from "@/root.css";
 
 // ----
@@ -21,27 +21,36 @@ export const links: LinksFunction = () => {
       ].join("&")}&display=swap`,
       rel: "stylesheet",
     },
-    {
-      href: "/icons/apple-touch-icon.png",
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-    },
-    {
-      href: "/icons/favicon-32x32.png",
-      type: "image/png",
-      rel: "icon",
-      sizes: "32x32",
-    },
-    {
-      href: "/favicons/favicon-16x16.png",
-      type: "image/png",
-      rel: "icon",
-      sizes: "16x16",
-    },
-    {
-      href: "/favicons/safari-pinned-tab.svg",
-      color: "#141414",
-      rel: "mask-icon",
-    },
+    ...favicons,
   ];
 };
+
+// ----
+const favicons: LinkDescriptor[] = [
+  {
+    href: "/favicons/apple-touch-icon.png",
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+  },
+  {
+    href: "/favicons/favicon-32x32.png",
+    type: "image/png",
+    rel: "icon",
+    sizes: "32x32",
+  },
+  {
+    href: "/favicons/favicon-16x16.png",
+    type: "image/png",
+    rel: "icon",
+    sizes: "16x16",
+  },
+  {
+    href: "/favicons/safari-pinned-tab.svg",
+    color: "#1b1b1b",
+    rel: "mask-icon",
+  },
+  {
+    rel: "shortcut icon",
+    href: "/favicons/favicon.ico",
+  },
+];
