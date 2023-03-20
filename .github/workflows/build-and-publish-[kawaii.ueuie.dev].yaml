@@ -47,10 +47,10 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       # ----
       - name: 📥 Install dependencies
-        run: pnpm install
+        run: pnpm install --filter @remix-kawaii.dev/docs
 
       - name: 🖇 Build application
-        run: npx turbo run build
+        run: npx turbo run build --filter @remix-kawaii.dev/docs
 
       # ----
       - name: 🧸 Publish to cloudflare pages
