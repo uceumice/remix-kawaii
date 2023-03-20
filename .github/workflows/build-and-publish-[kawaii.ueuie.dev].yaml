@@ -1,0 +1,61 @@
+on:
+  push:
+    paths:
+      - "apps/kawaii.ueuie.dev/build.pages.json"
+
+env:
+  APPLICATION_DIRECTORY: ./apps/kawaii.ueuie.dev
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment: execution
+    permissions:
+      contents: read
+      deployments: write
+    name: Build Remix Run + Publish to Cloudflare Pages
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install `node.js`
+        uses: actions/setup-node@v3
+
+      # ----
+      - uses: pnpm/action-setup@v2
+        name: install `pnpm`
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: get `pnpm` store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: setup `pnpm`` cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      # ----
+      - name: install dependencies
+        run: pnpm install
+
+      - name: build application
+        run: npx turbo run build --filter @remix-kawaii.dev/docs
+
+      # ----
+      - name: publish to cloudflare pages
+        uses: cloudflare/pages-action@22d9e5e143c6f9400b438a489e8d434b416d235d
+        with:
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: ${{ secrets.CF_PROJECT_NAME }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          directory: public
+          workingDirectory: ${{ env.APPLICATION_DIRECTORY }}

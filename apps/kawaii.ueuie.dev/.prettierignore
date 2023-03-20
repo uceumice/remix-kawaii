@@ -1,0 +1,8 @@
+# Nodejs Modules
+/node_modules
+
+# Remix Client Build
+/public/build
+
+# Remix Pages Build
+/functions
