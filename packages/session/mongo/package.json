@@ -1,5 +1,5 @@
 {
-  "name": "@remix-kawaii/session.mongodb",
+  "name": "@remix-kawaii/session.mongo",
   "version": "1.0.0",
   "publisher": "@uceumice <dev@ueuie.dev>",
   "author": {
