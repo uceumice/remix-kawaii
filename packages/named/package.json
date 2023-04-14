@@ -1,6 +1,6 @@
 {
   "name": "@remix-kawaii/named",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "@uceumice <dev@ueuie.dev>",
   "author": {
     "name": "uceumice",
@@ -17,16 +17,18 @@
     "url": "https://github.com/uceumice/remix-kawaii/issues",
     "email": "bug@ueuie.dev"
   },
-  "main": "out/index.js",
-  "types": "out/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "out"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check": "tsc --noEmit",
     "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "dev": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\""
+    "lint:fix": "eslint src --ext .ts --fix"
   },
   "peerDependencies": {
     "@remix-run/server-runtime": ">=1.10.0"
@@ -34,9 +36,8 @@
   "devDependencies": {
     "@types/lodash": "^4.14.191",
     "typescript": "~5.0.2",
-    "concurrently": "^7.6.0",
-    "tsc-alias": "^1.8.3",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "tsup": "^6.7.0"
   },
   "keywords": [
     "remix run",

@@ -1,6 +1,6 @@
 {
   "name": "@remix-kawaii/routes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "@uceumice <dev@ueuie.dev>",
   "author": {
     "name": "uceumice",
@@ -17,18 +17,20 @@
     "url": "https://github.com/uceumice/remix-kawaii/issues",
     "email": "bug@ueuie.dev"
   },
-  "main": "out/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "rkr": "out/cli.js"
+    "rkr": "dist/cli.js"
   },
   "files": [
-    "out"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check": "tsc --noEmit",
     "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix",
-    "dev": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\""
+    "lint:fix": "eslint src --ext .ts --fix"
   },
   "dependencies": {
     "chokidar": "^3.5.3",
@@ -39,17 +41,12 @@
     "@remix-run/dev": ">=1.10.0"
   },
   "devDependencies": {
-    "@types/cli-table": "^0.3.1",
-    "@types/jest": "^29.5.0",
     "@types/mkdirp": "^1.0.2",
     "@types/node": "^18.15.3",
     "@types/pluralize": "^0.0.29",
-    "semantic-release": "^20.1.3",
-    "typescript": "^5.0.2",
-    "vitest": "^0.29.3",
-    "concurrently": "^7.6.0",
-    "tsc-alias": "^1.8.3",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
   },
   "keywords": [
     "remix run",
