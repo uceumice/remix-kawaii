@@ -1,0 +1,19 @@
+{
+  "extends": "tsconfig/shared.json",
+  "compilerOptions": {
+    "target": "ES2021",
+    "outDir": "out",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}
