@@ -2,21 +2,55 @@
   <img src="https://raw.githubusercontent.com/uceumice/remix-kawaii/master/.assets/banner.png">
 </div>
 
-# [Remix Kawaii](https://kawaii.ueuie.dev)
+# [Remix Kawaii](https://remix.ueuie.dev/kawaii)
 
-Remix Kawaii is a set of unopinionated helpful utils for your next Remix Run project. These tools range from cient- or serverside tools to fullstack plug-in components. The main purpose of this project is to upgrade your developer experience and provide a drop-in solution for trivial tasks and parts of your application which are common to any Remix-powered website.
+Remix Kawaii is a set of opinionated tools to help developers who use Remix Run. These tools include different modules, components, adapters and CLIs. The main purpose of this project is to make your development experience better and your day-to-day problems less routine. You can also draw inspiration from examples and templates.
 
 - [Check out the Docs](https://kawaii.ueuie.dev/docs)
 
-## Tools & Components
+## Configuration
 
-### Helpers
+- @remix-kawaii/prettier-config
+- @remix-kawaii/eslint-config
+- @remix-kawaii/tsconfig
 
-- @remix-kawaii/named
+### Sessions
 
-### Development Tools
+- @remix-kawaii/session.mongo
+
+<details>
+  <summary>Planned</summary>
+  
+- @remix-kawaii/session.mongo-data-api
+- @remix-kawaii/session.surrealdb
+
+</details>
+
+### Routing
 
 - @remix-kawaii/routes
+
+### Adapters
+
+<details>
+  <summary>Planned</summary>
+  
+- @remix-kawaii/adapter.cloudflare-pages-advanced
+- @remix-kawaii/adapter.cloudflare-pages-v2
+
+</details>
+
+### Caching
+
+<details>
+  <summary>Planned</summary>
+  
+- @remix-kawaii/caching
+  - @remix-kawaii/caching.cloudflare
+  - @remix-kawaii/caching.redis
+  - @remix-kawaii/caching.node
+
+</details>
 
 ## Contribute
 
