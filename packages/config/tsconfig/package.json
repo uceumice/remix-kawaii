@@ -1,0 +1,39 @@
+{
+  "name": "@remix-kawaii.config/tsconfig",
+  "version": "0.0.1",
+  "description": "Remix Kawaii - configuration templates for typescript.",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/config/tsconfig"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/config",
+  "keywords": [
+    "remix kawaii",
+    "config",
+    "tsconfig"
+  ],
+  "//": "____________________________________________________________",
+  "main": "config/index.json",
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "files": [
+    "/config",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}

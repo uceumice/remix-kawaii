@@ -1,0 +1,62 @@
+{
+  "name": "@remix-kawaii/named",
+  "version": "1.0.4",
+  "description": "Remix Kawaii - typesafe route descriptors.",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/kawaii/modules/utilities/named"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/utils/named",
+  "keywords": [
+    "remix run",
+    "remix",
+    "server",
+    "named",
+    "reducer",
+    "actions",
+    "loaders",
+    "helpers"
+  ],
+  "//": "____________________________________________________________",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check": "tsc --noEmit",
+    "format": "prettier -w .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "ncu": "ncu",
+    "ncu:u": "ncu -u"
+  },
+  "devDependencies": {
+    "@remix-kawaii.config/prettier-config": "workspace:*",
+    "@remix-kawaii.config/eslint-config": "workspace:*",
+    "@remix-kawaii.config/tsconfig": "workspace:*",
+    "npm-check-updates": "^16.10.9",
+    "typescript": "~5.0.4",
+    "tsup": "^6.7.0"
+  },
+  "peerDependencies": {
+    "@remix-run/server-runtime": "^1.16.0"
+  },
+  "files": [
+    "/dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}

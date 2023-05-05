@@ -1,0 +1,64 @@
+{
+  "name": "@remix-kawaii/session.mongo",
+  "version": "1.0.1",
+  "description": "Remix Kawaii - mongo session adapter (nodejs).",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/kawaii/modules/session/mongo"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/session/mongo",
+  "keywords": [
+    "remix run",
+    "remix",
+    "session",
+    "session-storage",
+    "database",
+    "mongodb",
+    "mongo"
+  ],
+  "//": "____________________________________________________________",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check": "tsc --noEmit",
+    "format": "prettier -w .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "ncu": "ncu",
+    "ncu:u": "ncu -u"
+  },
+  "dependencies": {
+    "bson": "^5.2.0"
+  },
+  "devDependencies": {
+    "@remix-kawaii.config/prettier-config": "workspace:*",
+    "@remix-kawaii.config/eslint-config": "workspace:*",
+    "@remix-kawaii.config/tsconfig": "workspace:*",
+    "mongodb": "^5.4.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@remix-run/server-runtime": ">=1.10.0"
+  },
+  "files": [
+    "/dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}

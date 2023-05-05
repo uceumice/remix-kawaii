@@ -1,0 +1,39 @@
+{
+  "name": "@remix-kawaii.config/prettier-config",
+  "version": "0.0.1",
+  "description": "Remix Kawaii - configuration templates for prettier.",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/config/prettier"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/config",
+  "keywords": [
+    "remix kawaii",
+    "config",
+    "prettier"
+  ],
+  "//": "____________________________________________________________",
+  "main": "config/index.js",
+  "devDependencies": {
+    "@types/prettier": "^2.7.2"
+  },
+  "peerDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "files": [
+    "/config",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}

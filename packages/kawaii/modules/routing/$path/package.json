@@ -1,0 +1,71 @@
+{
+  "name": "@remix-kawaii/routes",
+  "version": "1.0.2",
+  "description": "Remix Kawaii - typesafe route descriptors.",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/kawaii/modules/routing/$path"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/routing",
+  "keywords": [
+    "remix run",
+    "remix",
+    "react",
+    "routes",
+    "routing",
+    "typesafe",
+    "helpers"
+  ],
+  "//": "____________________________________________________________",
+  "bin": {
+    "rkr": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "check": "tsc --noEmit",
+    "format": "prettier -w .",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "ncu": "ncu --reject meow",
+    "ncu:u": "ncu -u --reject meow"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "meow": "9.0.0",
+    "mkdirp": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@remix-run/dev": ">=1.10.0"
+  },
+  "devDependencies": {
+    "@remix-kawaii.config/prettier-config": "workspace:*",
+    "@remix-kawaii.config/eslint-config": "workspace:*",
+    "@remix-kawaii.config/tsconfig": "workspace:*",
+    "@types/mkdirp": "^1.0.2",
+    "@types/node": "^20.0.0",
+    "@types/pluralize": "^0.0.29",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "npm-check-updates": "^16.10.9"
+  },
+  "files": [
+    "/dist",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}

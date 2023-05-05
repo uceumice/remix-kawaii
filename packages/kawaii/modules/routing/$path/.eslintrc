@@ -1,0 +1,4 @@
+{
+  "extends": "@remix-kawaii.config/eslint-config",
+  "root": true
+}

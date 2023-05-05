@@ -1,0 +1,44 @@
+{
+  "name": "@remix-kawaii.config/eslint-config",
+  "version": "0.0.1",
+  "description": "Remix Kawaii - configuration templates for eslint.",
+  "bugs": {
+    "url": "https://github.com/uceumice/remix-kawaii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uceumice/remix-kawaii",
+    "directory": "packages/config/eslint"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "uceumice",
+    "email": "hiii@oss.ueuie.dev"
+  },
+  "publisher": "@uceumice <hiii@oss.ueuie.dev>",
+  "homepage": "https://remix.ueuie.dev/kawaii/config",
+  "keywords": [
+    "remix kawaii",
+    "config",
+    "eslint"
+  ],
+  "//": "____________________________________________________________",
+  "main": "config/index.js",
+  "dependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-turbo": "^1.9.3",
+    "eslint-config-airbnb": "^19.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.39.0"
+  },
+  "files": [
+    "/config",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ]
+}
